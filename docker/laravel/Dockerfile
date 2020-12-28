@@ -4,7 +4,7 @@ COPY ./src /application
 
 WORKDIR /application
 
-COPY --from=ecs/cpmposer /usr/local/bin/composer /usr/local/bin/composer
+COPY --from=ecs/composer /usr/local/bin/composer /usr/local/bin/composer
 
 RUN apt-get update && apt-get install -y \
       git \
